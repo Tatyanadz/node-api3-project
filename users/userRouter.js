@@ -1,6 +1,6 @@
 const express = require('express');
 const users = require("./userDb")
-const posts = require("../posts/postRouter")
+const posts = require("../posts/postDb")
 const postRouter = require("../posts/postRouter")
 
 const router = express.Router();
@@ -58,7 +58,7 @@ router.delete('/:id', validateUserId(), (req, res, next) => {
     .remove(req.params.id)
     .then(result => {
       res.json({
-        message: "User succesfully deleted",
+        message: "User successfully deleted",
         result
       })
     })

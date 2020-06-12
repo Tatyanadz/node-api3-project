@@ -1,4 +1,6 @@
 // code away!
+require('dotenv').config()
+
 const express = require("express")
 const cors = require("cors")
 const logger = require("./middleware/logger")
@@ -6,7 +8,7 @@ const welcomeRouter = require("./welcome/welcome-router")
 const userRouter = require("./users/userRouter")
 
 const server = express()
-const port = 4000
+const port = process.env.PORT
 
 server.use(express.json())
 server.use(cors())

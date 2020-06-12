@@ -13,7 +13,7 @@ const UsersList = () => {
               setUsers(res.data)
           })
           .catch(err => console.log(err))
-    }, [users])
+    }, [])
 
     return (
         <div>
@@ -31,10 +31,12 @@ const UsersList = () => {
 
 const Users = Styled.div`
     display: flex;
+    justify-content: center;
+    color: red;
 `;
 
 const User = Styled.div`
-    margin: 2rem 6rem;
+    margin: 2rem 3rem;
 `
 
 export default UsersList
